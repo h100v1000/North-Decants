@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>North Decant — Luxury Fragrance Samples</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <div class="hamburger-menu">
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="mobile-nav" id="mobileNav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li id="authOption"><button id="loginBtn" class="auth-btn">Sign In</button></li>
+        <li id="profileOption" style="display: none;"><button id="logoutBtn" class="auth-btn logout-btn">Sign Out</button></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="authModal" class="auth-modal" style="display: none;">
+    <div class="auth-modal-content">
+      <button class="close-btn" id="closeAuthBtn">&times;</button>
+      <h2>Sign In</h2>
+      <p>Access your exclusive decants and track orders</p>
+      <div id="googleSignInContainer"></div>
+    </div>
+  </div>
+
+  <header id="home">
+    <div class="header-inner">
+      <div class="logo-mark">ND</div>
+      <h1>NORTH DECANT</h1>
+      <p class="tagline">Luxury fragrance samples, curated for the curious</p>
+    </div>
+    <div class="header-divider"></div>
+    <div class="header-cta">
+      <p>Discover exceptional perfumes before you commit</p>
+      <a href="#shop" class="cta-button">Explore Collection</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="shop" class="shop-section">
+      <h2>Our Collection</h2>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="floral">Floral</button>
+        <button class="filter-btn" data-filter="woody">Woody</button>
+        <button class="filter-btn" data-filter="fresh">Fresh</button>
+      </div>
+      <div id="products" class="products-grid"></div>
+      <div id="loading" class="loading"><span>Loading collection...</span></div>
+    </section>
+
+    <section id="about" class="why-section">
+      <h2>Why Choose North Decant</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">★</div>
+          <h3>Hand-Poured</h3>
+          <p>Each decant is carefully poured from authentic full bottles by our fragrance experts.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">✓</div>
+          <h3>Authentic</h3>
+          <p>100% genuine fragrances sourced from official distributors.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">♡</div>
+          <h3>Curated</h3>
+          <p>We select only the finest fragrances that meet our standards.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">→</div>
+          <h3>Fast Shipping</h3>
+          <p>Your decants ship within 24 hours with secure packaging.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="cart-toast" class="cart-toast" hidden>Added to cart</div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>North Decant</h4>
+        <p>Premium fragrance samples for the discerning collector.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>hello@northdecant.com</p>
+        <p>© 2024 North Decant. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <p class="footer-bottom">All decants are hand-poured from genuine full bottles</p>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="auth.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
